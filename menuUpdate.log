@@ -1,0 +1,2 @@
+2015-02-03 15:46:11,826 - DEBUG - harvardtojson - Fetching from URL http://food.cs50.net/api/1.3/menus?sdt=2015-02-03&output=json
+2015-02-03 15:46:11,954 - DEBUG - harvardtojson - Setting today's date to 150203
