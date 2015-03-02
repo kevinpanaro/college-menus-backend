@@ -8,8 +8,8 @@ import sys
 
 def s3_upload():
     #Variables 
-    access_key = ""
-    access_secret = ""
+    access_key = "AKIAIBFJ7RU324OVTREA"
+    access_secret = "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"
     bucket_name = "collegemenusdryrun"
 
     # test dir
@@ -50,7 +50,6 @@ def s3_upload():
                (sourcepath, bucket_name)
 
             k = boto.s3.key.Key(mybucket)
-            mybucket.set_acl('public-read')
             k.key = destpath
-            k.set_contents_from_filename(sourcepath)
+            k.set_contents_from_filename(sourcepath, policy='public-read')
     
