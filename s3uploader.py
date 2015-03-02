@@ -5,14 +5,15 @@ import os.path
 import sys
 
 
+
 def s3_upload():
     #Variables 
-    access_key = "AKIAI7ASCZ7ZFEJPLVUQ"
-    access_secret = "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"
+    access_key = ""
+    access_secret = ""
     bucket_name = "collegemenusdryrun"
 
     # test dir
-    test_data = "/Users/kevinpanaro/Projects/college_menus_backend/dates"
+    test_data = "../dates"
     final_dest = ""
 
     conn = S3Connection(access_key, access_secret)
@@ -49,7 +50,7 @@ def s3_upload():
                (sourcepath, bucket_name)
 
             k = boto.s3.key.Key(mybucket)
+            mybucket.set_acl('public-read')
             k.key = destpath
             k.set_contents_from_filename(sourcepath)
-
-# os.path.join(os.getcwd() + "dates")
+    
