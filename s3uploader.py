@@ -8,8 +8,8 @@ import sys
 
 def s3_upload():
     #Variables 
-    access_key = "AKIAIBFJ7RU324OVTREA"
-    access_secret = "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"
+    access_key = ""
+    access_secret = ""
     bucket_name = "collegemenusdryrun"
 
     # test dir
